@@ -16,11 +16,12 @@ stars = opinion.select_one("span.user-post__score-count").get_text().strip()
 content = opinion.select_one("div.user-post__text").get_text().strip()
 
 useful = opinion.select_one("span[id^=\"votes-yes\"]").get_text().strip()
-useless = opinion.select_one("span[id^=\"votes-no").get_text().strip()
+useless = opinion.select_one("span[id^=\"votes-no\"]").get_text().strip()
 publish_date = opinion.select_one("span.user-post__published > time:nth-child(1)")["datetime"]
 purchase_date = opinion.select_one("span.user-post__published > time:nth-child(2)")["datetime"]
-
+print(opinion)
+print(author)
 print (stars)
 print( content)
 print(useful)
-pritn(useless)
+print (useless)
