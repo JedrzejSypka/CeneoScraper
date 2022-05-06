@@ -1,5 +1,5 @@
 import os
-import pandas as pd
+import pandas as pd   #macplotlib
 print(*[filename.split(".")[0] for filename in os.listdir("./opinions")], sep="\n")
 
 product_id= input("Podaj identyfikator produktu: ")
